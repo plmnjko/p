@@ -1,10 +1,11 @@
-Kelas c
+(Kelas c)
 Ip addres = 192.168.15.1 /25 => angka 25 = jumlah semua angka biner nilai 1 
 Biner = 11111111. 11111111. 11111111 .10000000 => x=1, y=7
 Subnet mask = 255.255.255.128 (bentuk decimal biner)
 Jumlah blok/subnet = 2x = 2
 Jumlah host per subnet = 2y – 2 = 27 – 2 = 126
 Block subnet = 256-128 = 128
+
 Table 
 Network address	192.168.15.0	192.168.15.128
 Host awal	192.168.15.1	192.168.15.129
@@ -12,15 +13,15 @@ Host akhir	192.168.15.126	192.168.15.254
 broadcast	192.168.15.127	192.168.15.255
 
 
-Kelas b 
+(Kelas b) 
 Ip addres = 150.168.xx.xx /18
 Biner = 11111111. 11111111.11000000 .00000000 => x=2, y=14
 Subnet mask = 255.255.192.0 (bentuk decimal biner)
 Jumlah blok/subnet = 2x = 22 =4
 Jumlah host per subnet = 2y – 2 = 214 – 2 = 16384-2 = 16382
 Block subnet = 256-192 = 64
-Table
-				
+
+Table				
 Network address	150.168.0.0	150.168.64.0	150.168.128.0	150.168.192.0
 Host awal	150.168.0.1	150.168.64.1	150.168.128.1	150.168.192.1
 Host akhir	150.168.63.254	150.168.127.254	150.168.191.254	150.168.255.254
@@ -28,11 +29,7 @@ broadcast	150.168.63.255	150.168.127.255	150.168.191.255	150.168.255.255
 
 
 
-
-
-
-
-Quiz
+(Quiz)
 172.10.x.x /17
 Biner = 11111111. 11111111.10000000. 00000000 > x =1 , y = 15
 Subnet = 255.255.128.0
@@ -40,114 +37,40 @@ Jumlah blok/subnet = 2x = 21 =2
 Jumlah host per subnet = 215 – 2 = 215 – 2 = 32.768-2 = 32.766
 Block subnet = 256-128 = 128
 
-				
+table
 Network address	150.168.0.0	150.168.128.0		
 Host awal	150.168.0.1	150.168.128.1		
 Host akhir	150.168.127.254	150.168.255.254		
 broadcast	150.168.127.255	150.168.255.255		
 
 
-Kelas a
+(Kelas a)
 Ip addres = 150.xx.xx.xx /10
 Biner = 11111111.11000000.00000000 .00000000 => x=2, y=22
 Subnet mask = 255.192.0.0 (bentuk decimal biner)
 Jumlah blok/subnet = 2x = 22 =4
 Jumlah host per subnet = 2y – 2 = 222 – 2 = 16384-2 = 4194302
 Block subnet = 256-192 = 64
-Table
-				
+
+Table				
 Network address	88.0.0.0	88.64.0.0	88.128.0.0	88.192.0.0
 Host awal	88.0.0.1	88.64.0.1	88.128.0.1	88.192.0.1
 Host akhir	88.63.255.254	88.127.255.254	88.191.255.254	88.255.255.254
 broadcast	88.63.255.255	88.127.255.255	88.191.255.255	88.255.255.255
 
 
+------------------------------------------------------
+akun cisco 
 email noreplydummy83@gmail.com
 pass YangKemarin@1234
-
-
-
-
 ------------------------------------------------------
 
 
 
 
-
-
 2100018413 / FAUZI TRIAGUNG WIGUNA
 
-Kelas c
-Ip addres = 192.168.15.1 /25 => angka 25 = jumlah semua angka biner nilai 1 
-Biner = 11111111. 11111111. 11111111 .10000000 => x=1, y=7
-Subnet mask = 255.255.255.128 (bentuk decimal biner)
-Jumlah blok/subnet = 2x = 2
-Jumlah host per subnet = 2y – 2 = 27 – 2 = 126
-Block subnet = 256-128 = 128
-Table 
-Network address	192.168.15.0	192.168.15.128
-Host awal	192.168.15.1	192.168.15.129
-Host akhir	192.168.15.126	192.168.15.254
-broadcast	192.168.15.127	192.168.15.255
-
-
-Kelas b 
-Ip addres = 150.168.xx.xx /18
-Biner = 11111111. 11111111.11000000 .00000000 => x=2, y=14
-Subnet mask = 255.255.192.0 (bentuk decimal biner)
-Jumlah blok/subnet = 2x = 22 =4
-Jumlah host per subnet = 2y – 2 = 214 – 2 = 16384-2 = 16382
-Block subnet = 256-192 = 64
-Table
-				
-Network address	150.168.0.0	150.168.64.0	150.168.128.0	150.168.192.0
-Host awal	150.168.0.1	150.168.64.1	150.168.128.1	150.168.192.1
-Host akhir	150.168.63.254	150.168.127.254	150.168.191.254	150.168.255.254
-broadcast	150.168.63.255	150.168.127.255	150.168.191.255	150.168.255.255
-
-
-
-
-
-
-
-Quiz
-172.10.x.x /17
-Biner = 11111111. 11111111.10000000. 00000000 > x =1 , y = 15
-Subnet = 255.255.128.0
-Jumlah blok/subnet = 2x = 21 =2
-Jumlah host per subnet = 215 – 2 = 215 – 2 = 32.768-2 = 32.766
-Block subnet = 256-128 = 128
-
-				
-Network address	150.168.0.0	150.168.128.0		
-Host awal	150.168.0.1	150.168.128.1		
-Host akhir	150.168.127.254	150.168.255.254		
-broadcast	150.168.127.255	150.168.255.255		
-
-
-Kelas a
-Ip addres = 88.xx.xx.xx /10
-Biner = 11111111.11000000.00000000 .00000000 => x=2, y=22
-Subnet mask = 255.192.0.0 (bentuk decimal biner)
-Jumlah blok/subnet = 2x = 22 =4
-Jumlah host per subnet = 2y – 2 = 222 – 2 = 16384-2 = 4194302
-Block subnet = 256-192 = 64
-Table
-				
-Network address	88.0.0.0	88.64.0.0	88.128.0.0	88.192.0.0
-Host awal	88.0.0.1	88.64.0.1	88.128.0.1	88.192.0.1
-Host akhir	88.63.255.254	88.127.255.254	88.191.255.254	88.255.255.254
-broadcast	88.63.255.255	88.127.255.255	88.191.255.255	88.255.255.255
-
-
-
-
-
-
-2100018413 / FAUZI TRIAGUNG WIGUNA
-
-Postest
+(Postest)
 Ip addres = 192.13.xx.xx /19
 Biner = 11111111. 11111111.11100000 .00000000 => x=3, y=13
 Subnet mask = 255.255.224.0 (bentuk decimal biner)
@@ -155,7 +78,7 @@ Jumlah blok/subnet = 2x = 23 =8
 Jumlah host per subnet = 2y – 2 = 213 – 2 = -2 = 8192
 Block subnet = 256-224 = 32
 
-								
+table
 Network address	192.13.0.0	192.13.32.0	192.13.64.0	192.13.96.0	192.13.128.0	192.13.160.0	192.13.192.0	192.13.224.0
 Host awal	192.13.0.1	192.13.32.1	192.13.64.1	192.13.96.1	192.13.128.1	192.13.160.1	192.13.192.1	192.13.224.1
 Host akhir	192.13.31.254	192.13.63.254	192.13.95.254	192.13.127.254	192.13.159.254	192.13.191.254	192.13.223.254	192.13.255.254
