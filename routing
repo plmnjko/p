@@ -1,3 +1,4 @@
+---static
 cli command routing :
 network addres tujuan  subnet mask  ip route sebelah
 
@@ -6,4 +7,20 @@ lab jaringan :
 
 lab basdat : 
 #ip route 192.168.15.0 255.255.255.192 192.168.15.129
+
+
+---dynamic with eigrp 
+cli command route 
+
+lab basdat
+router eigrp 10 -> 10 = angka terserah
+network 192.168.15.64
+network 192.168.15.128
+
+lab jaringan
+router eigrp 10 -> 10 = angka terserah-> angka harus sama dengan router eigrp diatas 
+network 192.168.15.0
+network 192.168.15.128
+
+
 
