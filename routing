@@ -1,3 +1,9 @@
 cli command routing :
-network addres tujuan - subnet mask - ip route sebelah
+network addres tujuan  subnet mask  ip route sebelah
+
+lab jaringan :
+#ip route 192.168.15.64 255.255.255.192 192.168.15.130
+
+lab basdat : 
+#ip route 192.168.15.0 255.255.255.192 192.168.15.129
 
