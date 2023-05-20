@@ -8,6 +8,13 @@ lab jaringan :
 lab basdat : 
 #ip route 192.168.15.0 255.255.255.192 192.168.15.129
 
+uts prak kdjk 
+router4
+ip route 110.30.64.0 255.255.224.0 110.30.0.3
+
+router7
+ip route 110.30.32.0 255.255.224.0 110.30.0.2
+
 
 ---dynamic pake eigrp 
 cli command route 
@@ -21,6 +28,11 @@ lab jaringan
 router eigrp 10 -> 10 = angka terserah-> angka harus sama dengan router eigrp diatas yg di lab basdat  
 network 192.168.15.0
 network 192.168.15.128
+
+
+perintah command cli 
+#exit -> buat turun 
+#conf t -> masuk ke config 
 
 
 
