@@ -2,8 +2,8 @@
 Ip addres = 192.168.15.1 /25 => angka 25 = jumlah semua angka biner nilai 1 
 Biner = 11111111. 11111111. 11111111 .10000000 => x=1, y=7
 Subnet mask = 255.255.255.128 (bentuk decimal biner)
-Jumlah blok/subnet = 2x = 2
-Jumlah host per subnet = 2y – 2 = 27 – 2 = 126
+Jumlah blok/subnet = 2 pangkat x = 2
+Jumlah host per subnet = 2 pangkat y – 2 = 27 – 2 = 126
 Block subnet = 256-128 = 128
 
 Table 
@@ -85,4 +85,18 @@ Host akhir	192.13.31.254	192.13.63.254	192.13.95.254	192.13.127.254	192.13.159.2
 broadcast	192.13.31.255	192.13.63.255	192.13.95.255	192.13.127.255	192.13.159.255	192.13.191.255	192.13.223.255	192.13.255.255
 
 
+uts prak kdjk
+ip address = 110.30.xxx.xxx/19 
+prefix = 19 -> angka 1 nya ada 19 
 
+biner = 11111111.11111111.11100000.00000000 -> x(jumlah biner 1 paling belakang) = 3, y(jumlah biner 0) = 13 
+subnet mask = 255.255.(128+64+32).0 -> 255.255.224.0
+jumlah blok/subnet = 2^x = 2^3 = 8
+jumlah host per subnet = 2^y - 2 = 2^13 - 2 = 8192 - 2 = 8190
+block subnet = 256 - (oktet ketiga subnet mask) = 256 - 224 = 32
+
+table 
+na  110.30.0.0    110.30.32.0   110.30.64.0   110.30.128.0   110.30..0   110.30.32.0   110.30.32.0   110.30.32.0
+h0  110.30.0.1    110.30.32.1   110.30.65.1
+h1  110.30.31.254 110.30.63.254 110.30.64.
+ba  110.30.31.255 110.30.63.255
