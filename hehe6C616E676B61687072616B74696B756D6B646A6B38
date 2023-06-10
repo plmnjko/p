@@ -1,0 +1,100 @@
+
+Pembagian IP Address:
+VLAN 10: 192.168.10.xxx/24
+VLAN 20: 192.168.20.xxx/24
+VLAN 30: 192.168.30.xxx/24
+VLAN 40: 192.168.40.xxx/24
+
+PERANGKAT YANG DIPAKAI:
+1 Buah Router 1841
+Nama perangkat: Router Pusat
+2 Buah Switch 2960
+Nama perangkat 1: Switch Kiri
+Nama perangkat 2: Switch Kanan
+Port g0/1 Switch Kiri terhubung ke port f0/0 Router Pusat
+Port g0/1 Switch Kanan terhubung ke port f0/1 Router Pusat
+
+Terdapat 4 PC di masing-masing Switch
+Switch Kiri
+2 PC dengan nama PC.Jar.x terhubung di port antara f0/1 - f0/9
+2 PC dengan nama PC.Bdat.x terhubung di port antara f0/10 - f0/19
+Switch Kanan
+2 PC dengan nama PC.Mulmed.x terhubung di port antara f0/1 - f0/9
+2 PC dengan nama PC.Komdas.x terhubung di port antara f0/10 - f0/19
+
+SYARAT KONFIGURASI:
+Switch Kiri:
+vlan 10 with name Lab_Jar
+vlan 20 with name Lab_Basdat
+Implementasi vlan 10 ke port f0/1 - f0/9
+Implementasi vlan 20 ke port f0/10 - f0/19
+Port ke Router Pusat yaitu g0/1 mode trunk
+
+Switch Kanan:
+vlan 30 with name Lab_Mulmed
+vlan 40 with name Lab_Komdas
+Implementasi vlan 30 ke port f0/1 - f0/9
+Implementasi vlan 40 ke port f0/10 - f0/19
+Port ke Router Pusat yaitu g0/1 mode trunk
+
+Router Pusat:
+Hidupkan port yang akan menjadi induk VLAN
+Buat vlan 10 dan 20 pada port f0/0
+Konfigurasi encapsulation pada vlan 10 dan 20 tersebut
+Berikan ip address pada vlan 10 dan 20 sesuai pembagian ip address diatas
+Ulangi langkah diatas untuk vlan 30 dan 40 pada port f0/1
+Tanpa routing
+
+Masing-Masing PC:
+Berikan IP Address PC sesuai Pembagian IP Address VLAN 10, 20, 30, 40. bisa secara static maupun DHCP Router
+Default gateway mengarah pada IP Router di masing-masing VLAN
+PENGUJIAN KONEKSI (PING MUST BE SUCCESSFUL):
+PC.Jar.1 => PC.Bdat.1
+PC.Mulmed.1 => PC.Komdas.1
+PC.Jar.1 => PC.Mulmed.1
+PC.Bdat.1 => PC.Komdas.1
+
+Cheat Sheet Command yang berjalan pada mode (config)#
+Perintah untuk masuk mode (config)# di perangkat router/switch
+enable
+configure terminal
+
+Menghidupkan port pada Router
+interface [target_port]
+no shutdown
+
+Membuat Vlan di Router
+interface [target_port].[number_vlan]
+encapsulation dot1q [number_vlan]
+ip address [ip_add] [subnetmask]
+
+Membuat DHCP di Router
+ip dhcp pool [nama_dhcp]
+network [net] [subnetmask]
+default [ip_router]
+
+Membuat Vlan di Switch
+vlan [number_vlan]
+name [nama_vlan]
+
+Implementasi vlan ke port secara bersamaan di switch
+interface range [target_port_awal]-[target_port_akhir]
+switchport access vlan [number_vlan]
+
+Membuat mode trunk di port switch
+interface [target_port]
+switchport mode trunk
+
+Cek Konfigurasi yang Berjalan
+do show running-config
+
+Membuat Static routing dirouter
+ip route [net_tujuan] [subnetmask] [ip_router_sebelah]
+
+Membuat routing eigrp dirouter
+router eigrp [number]
+network [net_terdiscovery] [subnetmask]
+no auto-summary
+
+Menghapus perintah yang salah di router/switch
+no [command_false]
