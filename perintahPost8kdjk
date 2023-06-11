@@ -1,0 +1,38 @@
+POSTEST 8 VLAN WITH SCORING
+
+Lakukan Subneting IP Address Berikut 192.168.xxx.xxx/19, untuk kebutuhan Topologi pada Postest.
+PERANGKAT YANG DIGUNAKAN:
+Router PT-Router 2 buah, beri name device Router Gedung A dan Router Gedung B
+port serial2/0 Router Gedung A terhubung ke port serial2/0 Router Gedung B
+
+Switch 2960 2 buah, beri name device Switch Gedung A dan Switch Gedung B
+Port GigabitEthernet0/1 Switch Gedung A terhubung ke port FastEthernet0/0 Router Gedung A.
+Port GigabitEthernet0/1 Switch Gedung B terhubung ke port FastEthernet0/0 Router Gedung B.
+
+Pada masing-masing Switch terdapat 6 buah PC dgn ketentuan:
+Switch Gedung A:
+3 buah pc untuk ruangan 1 dengan name device A.R.1.[no_urut_pc] => cth: A.R.1.1, A.R.1.2, dst. terhubung pada port switch antara FastEthernet0/1 sampai FastEthernet0/9.
+3 buah pc untuk ruangan 2 dengan name device A.R.2.[no_urut_pc] => cth: A.R.2.1, A.R.2.2, dst. terhubung pada port switch antara FastEthernet0/10 sampai FastEthernet0/19.
+Switch Gedung B:
+3 buah pc untuk ruangan 1 dengan name device B.R.1.[no_urut_pc] => cth: B.R.1.1, B.R.1.2, dst. terhubung pada port switch antara FastEthernet0/1 sampai FastEthernet0/9.
+3 buah pc untuk ruangan 2 dengan name device B.R.2.[no_urut_pc] => cth: B.R.2.1, B.R.2.2, dst. terhubung pada port switch antara FastEthernet0/10 sampai FastEthernet0/19.
+
+KETENTUAN KONFIGURASI:
+Router Gedung A & B
+Di kedua Router, pada port yang terkoneksi ke Switch Gedung A & B terdapat VLAN 10 dan VLAN 20
+Berikan IP address sesuai subneting ke VLAN 10 dan 20 serta koneksi antara router dengan router
+Buat DHCP Server Router ke semua ruangan dengan nama G[huruf_gedung]R[no_ruangan] => cth: GAR1, GBR1, dst.
+Buat routing static atau dynamic dikedua Router A & B. (Dilarang routing RIP)
+Switch Gedung A & B
+Buat VLAN 10 dgn nama Ged_[huruf_gedung].R1 => cth: Ged_A.R1, Ged_B.R1, dst. lalu implementasikan pada port FastEthernet0/1 sampai FastEthernet0/9 di kedua Switch
+Buat VLAN 20 dgn nama Ged_[huruf_gedung].R2 => cth: Ged_A.R2, Ged_B.R2, dst. lalu implementasikan pada port FastEthernet0/10 sampai FastEthernet0/19 di kedua Switch
+Aktifkan mode trunk pada port GigabitEthernet0/1 dikedua switch yang terhubung ke Router
+Semua PC mendapatkan IP Address secara otomatis dari Router
+
+LAKUKAN PENGUJIAN PING (SUCCESSFUL) DGN KETENTUAN:
+Antar Switch:
+PC A.R.1.1 => PC A.R.2.1
+PC B.R.1.1 => PC B.R.2.1
+Antar Gedung:
+PC A.R.1.1 => PC B.R.1.1
+PC A.R.2.1 => PC B.R.2.1
