@@ -6,3 +6,9 @@ cisco
 email noreplydummy83@gmail.com
 pass YangKemarin@1234 ;
 
+linker parameter opengl devc++ : 
+-lopengl32
+-lfreeglut
+-lglu32
+;
+
