@@ -1,0 +1,40 @@
+# Project: prak8
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Praktikum8/COLOR.o Praktikum8/CUBE_GRID.o Praktikum8/TIMER.o Praktikum8/VECTOR3D.o
+LINKOBJ  = main.o Praktikum8/COLOR.o Praktikum8/CUBE_GRID.o Praktikum8/TIMER.o Praktikum8/VECTOR3D.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -lopengl32 -lfreeglut -lglu32 -lwinmm
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = prak8.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Praktikum8/COLOR.o: Praktikum8/COLOR.cpp
+	$(CPP) -c Praktikum8/COLOR.cpp -o Praktikum8/COLOR.o $(CXXFLAGS)
+
+Praktikum8/CUBE_GRID.o: Praktikum8/CUBE_GRID.cpp
+	$(CPP) -c Praktikum8/CUBE_GRID.cpp -o Praktikum8/CUBE_GRID.o $(CXXFLAGS)
+
+Praktikum8/TIMER.o: Praktikum8/TIMER.cpp
+	$(CPP) -c Praktikum8/TIMER.cpp -o Praktikum8/TIMER.o $(CXXFLAGS)
+
+Praktikum8/VECTOR3D.o: Praktikum8/VECTOR3D.cpp
+	$(CPP) -c Praktikum8/VECTOR3D.cpp -o Praktikum8/VECTOR3D.o $(CXXFLAGS)
