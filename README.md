@@ -10,5 +10,6 @@ linker parameter opengl devc++ :
 -lopengl32
 -lfreeglut
 -lglu32
+-lwinmm
 ;
 
