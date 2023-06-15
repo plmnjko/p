@@ -11,5 +11,7 @@ linker parameter opengl devc++ :
 -lfreeglut
 -lglu32
 -lwinmm
+
+https://s.id/prakgrafkom
 ;
 
