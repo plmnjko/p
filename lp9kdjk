@@ -50,6 +50,20 @@ http_access deny prak9
 (jika reload 'service squid reload ' gagal(jika ada feedback dari setelah 'service squid reload', artinya gagal), 
 maka tulis 'service squid start' untuk menangani error)
 
+--post9--
+situs : 
+-elearning.uad.ac.id
+-bsi.uad.ac.id 
+-fk.unair.ac.id
+-kaskus.co.id
+-facebook.com
+
+
+
+acl variabel dstdomain situs yg tertentu yg ditutup
+http_access allow variabel
+
+http_access deny all (paling bawah)
 
 
 
