@@ -1,9 +1,46 @@
 linux mint command awalan: 
 sudo su 
-
 apt update 
 
 installasi web server dan proxy server:
-apt install apache2 -y 
-(apt install [aplikasinya] -y)
+apt install apache2 -y   (apt install [NamaAplikasinya] -y)
+
+service apache2 status  (lihat apakah service dari aplikasi apache sudah berjalan )
+
+(cek browser dan ketik localhost, ketika udah tertampil, maka sudah berhasil.) 
+
+apt install squid -y 
+
+service squid status   (cek service dari squid) 
+
+(coba browsing di browser linux)
+
+(balik ke terminal) 
+
+ifconfig
+
+ipnya = 10.0.2.15
+
+(masuk ke browser setting, masuk network setting, masuk proxy setting, pilih manual proxy )
+(http proxy=10.0.2.15, port=3128)
+
+(socks host = ipnya, port sama, browser terblokir)
+
+cd /etc/squid   (dia pindah folder sesuai cd nya)
+
+
+ls (menampilkan isian data dari /etc/squid)
+
+xed squid.conf (membuka editor squid.conf)
+
+search deny all -> (sampai sintaks 'http_access deny all') 
+(ubah jadi '#http_access deny all')
+
+tulis 'http_access allow all'
+
+save
+
+tulis di terminal 'service squid reload'
+
+cek browser lagi, berhasil lagi
 
