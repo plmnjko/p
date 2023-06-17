@@ -1,0 +1,9 @@
+linux mint command awalan: 
+sudo su 
+
+apt update 
+
+installasi web server dan proxy server:
+apt install apache2 -y 
+(apt install [aplikasinya] -y)
+
