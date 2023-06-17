@@ -36,11 +36,18 @@ xed squid.conf (membuka editor squid.conf)
 search deny all -> (sampai sintaks 'http_access deny all') 
 (ubah jadi '#http_access deny all')
 
-tulis 'http_access allow all'
+tulis 'http_access allow all' -> (membuat browser dibuka lagi, dan bisa diakses internet )
 
 save
 
 tulis di terminal 'service squid reload'
 
 cek browser lagi, berhasil lagi
+
+acl prak9 dstdomain .ugm.ac.id  (tulis di squid.config editor) (prak9 = hanya variabel bebas, acl=access list, dstdomain=domain tujuan yg mau kita kontrol)
+http_access deny prak9
+
+(jika reload 'service squid status ' gagal, maka tulis 'service squid start' untuk menangani error)
+
+
 
