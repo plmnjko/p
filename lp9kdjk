@@ -47,7 +47,10 @@ cek browser lagi, berhasil lagi
 acl prak9 dstdomain .ugm.ac.id  (tulis di squid.config editor) (prak9 = hanya variabel bebas, acl=access list, dstdomain=domain tujuan yg mau kita kontrol)
 http_access deny prak9
 
-(jika reload 'service squid status ' gagal, maka tulis 'service squid start' untuk menangani error)
+(jika reload 'service squid reload ' gagal(jika ada feedback dari setelah 'service squid reload', artinya gagal), 
+maka tulis 'service squid start' untuk menangani error)
+
+
 
 
 
