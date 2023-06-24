@@ -1,0 +1,7 @@
+anaconda prompt : 
+pip install --user --upgrade setuptools wheel (dalam folder atasnya ai_pkg) 
+
+terus ada requirement satisfied (berhasil, dan pip nya sudah ada)
+
+python Setup.py sdist bdist_wheel 
+
