@@ -5,5 +5,7 @@ terus ada requirement satisfied (berhasil, dan pip nya sudah ada)
 
 python Setup.py sdist bdist_wheel 
 (hasilnya: didalam folder ai_pkg jadi ada folder build, dist, ai_pkg.egg-info)
+(didalam folder dist: berisi 2 file (ekstension=.tar dan whl)yaitu ai_pkg-0.0.1.tar 
+  dan ai_pkg-0.0.1.py3-none-any.whl )
 
 
