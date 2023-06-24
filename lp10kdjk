@@ -1,0 +1,23 @@
+charger a7
+mikro 03a 
+
+masukkan kabel mikrotik slot 2 atau 3 atau 4(masuk ke slot 2)
+
+
+buka winbox 
+
+
+klik mac address nya, -> connect 
+
+pilih tab wireless, keliatan ada wlan1(artinya ada yg connect), klik 2 kali di wlan1nya
+
+masuk ke window Interface <wlan1>, 
+masuk tab wireless, 
+
+ubah mode jadi ap bridge, ubah ssid(namanya), klik enable, klik apply
+
+masuk security profile, ganti nama pass, ganti mode jadi dynamic keys, authentication types -> wpa2psk, terus edit password, trus apply, OK 
+
+cek wifi nya di hp 
+
+masuk ke homepage, ke tab IP>addresses> window address list > tambah > ipnya 192.168.1.1/24 interface nya wlan1  
