@@ -113,7 +113,7 @@ int main(int argc, char** argv)
 	
 	// penerapan algoritma KMP
 	startIdx = KMPMatch(ptext, pattern);
-	if (startIdx == -1)
+	if (startIdx == -1) //startIdx = -1 karena nilai inisialisasi int i = 1 pada fungsi int* computerFail(string pattern)
 		cout << "pola tidak ditemukan pada teks\n";
 	else
 		cout << "pola ditemukan pada posisi-" << startIdx << "\n";
