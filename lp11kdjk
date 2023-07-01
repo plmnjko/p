@@ -1,0 +1,19 @@
+ip 10.1.42.111
+gateway  10.1.42.1
+
+tutor : 
+atur address list,
+address diisi ip add pc(caranya pake ipconfig di cmd), isi network address(oktet 4 ip add = 0), interface ether1(karena kabel lan internet masuk ke port ether1). 
+
+
+atur dns settings, 
+server 8.8.8.8 , 8.8.4.4, trus apply, ok
+
+atur route list nya 
+klik tambah, isi addressnya, dan gatewaynya. 
+
+atur hotspot, 
+klik ip > hotspot > hotspot setup > interface ether2 >..next trus, dns name = wiguna.net, set user=wiguna, pass=413. 
+
+
+
