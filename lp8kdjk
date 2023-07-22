@@ -106,4 +106,4 @@ Membuat routing rip di router :
 - network [network address asal]
 - network [network address tujuan]
 - network [network address tujuan 2, seterusnya]
-- network ... [seterusnya]
+- network ... [seterusnya] [yg penting semua net add dimasukin semua]
