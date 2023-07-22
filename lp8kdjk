@@ -99,3 +99,11 @@ Membuat routing eigrp dirouter
 
 Menghapus perintah yang salah di router/switch
 - no [command_false]
+
+Membuat routing rip di router : 
+- router rip 
+- version 2 
+- network [network address asal]
+- network [network address tujuan]
+- network [network address tujuan 2, seterusnya]
+- network ... [seterusnya]
